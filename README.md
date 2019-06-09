@@ -10,4 +10,20 @@ Test repo supporting yarn offline mirror
 
 4. `yarn-offline-mirror-pruning true` in `yarn.rc` specifies to remove any unlinked dependencies.
 
+## Steps to install packages offline
+
+1. Make sure to clear yarn's global cache.
+
+```
+$ yarn cache clean
+```
+
+2. Remove `node_modules` if you did a `yarn install` to install packages over network.
+
+3. Install through offline mirror.
+
+```
+$ yarn install --offline
+```
+
 More info here : https://yarnpkg.com/blog/2016/11/24/offline-mirror/
